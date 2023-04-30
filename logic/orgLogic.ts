@@ -5,12 +5,12 @@ import { OrganizationModel } from "../models/OrganizationModel";
 export const IMG_TYPE = ".png";
 
 //check if needed
-export async function getOrg(org: OrganizationModel): Promise<OrganizationModel> {
-    const { orgName, orgPassword } = org;
-    const query = "SELECT * FROM organizations WHERE orgName = ? AND orgPassword = ?";
-    const [res] = await execute<OrganizationModel[]>(query, [orgName, orgPassword]);
-    return res[0];
-}
+// export async function getOrg(org: OrganizationModel): Promise<OrganizationModel> {
+//     const { orgName } = org;
+//     const query = "SELECT * FROM organizations WHERE orgName = ?";
+//     const [res] = await execute<OrganizationModel[]>(query, [orgName]);
+//     return res[0];
+// }
 
 export async function createOrg(org: OrganizationModel): Promise<OrganizationModel> {
     const { orgName, orgPassword } = org;

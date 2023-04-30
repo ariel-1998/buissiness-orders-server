@@ -8,6 +8,8 @@ export interface OrganizationModel {
 }
 
 export const orgSchema = z.object({
+    id: z.number().optional(),
+    
     orgName: z.string()
         .min(2, "Name must contain at lest 2 letters")
         .max(30, "Name can't contain more than 30 letters"),
